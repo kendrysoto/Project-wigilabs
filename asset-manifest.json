@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/Project-wigilabs/static/css/main.d145eda5.chunk.css",
+    "main.js": "/Project-wigilabs/static/js/main.e38b858c.chunk.js",
+    "main.js.map": "/Project-wigilabs/static/js/main.e38b858c.chunk.js.map",
+    "runtime-main.js": "/Project-wigilabs/static/js/runtime-main.b3ca6450.js",
+    "runtime-main.js.map": "/Project-wigilabs/static/js/runtime-main.b3ca6450.js.map",
+    "static/css/2.29c4d543.chunk.css": "/Project-wigilabs/static/css/2.29c4d543.chunk.css",
+    "static/js/2.fa288b6e.chunk.js": "/Project-wigilabs/static/js/2.fa288b6e.chunk.js",
+    "static/js/2.fa288b6e.chunk.js.map": "/Project-wigilabs/static/js/2.fa288b6e.chunk.js.map",
+    "static/js/3.9f14759d.chunk.js": "/Project-wigilabs/static/js/3.9f14759d.chunk.js",
+    "static/js/3.9f14759d.chunk.js.map": "/Project-wigilabs/static/js/3.9f14759d.chunk.js.map",
+    "static/js/4.26ea2341.chunk.js": "/Project-wigilabs/static/js/4.26ea2341.chunk.js",
+    "static/js/4.26ea2341.chunk.js.map": "/Project-wigilabs/static/js/4.26ea2341.chunk.js.map",
+    "static/js/5.d5fab1cc.chunk.js": "/Project-wigilabs/static/js/5.d5fab1cc.chunk.js",
+    "static/js/5.d5fab1cc.chunk.js.map": "/Project-wigilabs/static/js/5.d5fab1cc.chunk.js.map",
+    "static/js/6.c4d74510.chunk.js": "/Project-wigilabs/static/js/6.c4d74510.chunk.js",
+    "static/js/6.c4d74510.chunk.js.map": "/Project-wigilabs/static/js/6.c4d74510.chunk.js.map",
+    "static/js/7.360163d4.chunk.js": "/Project-wigilabs/static/js/7.360163d4.chunk.js",
+    "static/js/7.360163d4.chunk.js.map": "/Project-wigilabs/static/js/7.360163d4.chunk.js.map",
+    "static/js/8.0e01ee02.chunk.js": "/Project-wigilabs/static/js/8.0e01ee02.chunk.js",
+    "static/js/8.0e01ee02.chunk.js.map": "/Project-wigilabs/static/js/8.0e01ee02.chunk.js.map",
+    "static/js/9.d373f6b3.chunk.js": "/Project-wigilabs/static/js/9.d373f6b3.chunk.js",
+    "static/js/9.d373f6b3.chunk.js.map": "/Project-wigilabs/static/js/9.d373f6b3.chunk.js.map",
+    "static/js/10.8c076d95.chunk.js": "/Project-wigilabs/static/js/10.8c076d95.chunk.js",
+    "static/js/10.8c076d95.chunk.js.map": "/Project-wigilabs/static/js/10.8c076d95.chunk.js.map",
+    "index.html": "/Project-wigilabs/index.html",
+    "precache-manifest.cbcd8f0791b501eeb2274c411a6bb75d.js": "/Project-wigilabs/precache-manifest.cbcd8f0791b501eeb2274c411a6bb75d.js",
+    "service-worker.js": "/Project-wigilabs/service-worker.js",
+    "static/css/2.29c4d543.chunk.css.map": "/Project-wigilabs/static/css/2.29c4d543.chunk.css.map",
+    "static/css/main.d145eda5.chunk.css.map": "/Project-wigilabs/static/css/main.d145eda5.chunk.css.map",
+    "static/js/2.fa288b6e.chunk.js.LICENSE.txt": "/Project-wigilabs/static/js/2.fa288b6e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b3ca6450.js",
+    "static/css/2.29c4d543.chunk.css",
+    "static/js/2.fa288b6e.chunk.js",
+    "static/css/main.d145eda5.chunk.css",
+    "static/js/main.e38b858c.chunk.js"
+  ]
+}
