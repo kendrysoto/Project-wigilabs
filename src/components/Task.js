@@ -11,6 +11,12 @@ const Task = () => {
 
     const [tasks, setTasks] = useState([]);
     const [currenId, setCurrenId] = useState('');
+    
+    const mystyle2 = {
+        backgroundColor: "#1E90FF",
+      
+      };
+  
 
 
     const addOrEdit = async (taskObjec) => {
@@ -50,8 +56,8 @@ const Task = () => {
 
     return (
         <>
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
+            <div style={mystyle2} class="jumbotron jumbotron-fluid">
+                <div  class="container">
                     <h1 class="display-4">Add task</h1>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import Menu from './components/Menu';
 import Main from './components/Main';
 import {useFirebaseApp} from 'reactfire'; 
 import {ToastContainer} from 'react-toastify';
-
+import Chat from './components/Chat';
 
 function App() {
   const firebase = useFirebaseApp();
@@ -14,6 +14,7 @@ function App() {
       <Menu/>
       <Main/>
       <ToastContainer />
+     
       
 
     </div>

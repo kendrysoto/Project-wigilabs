@@ -27,22 +27,20 @@ const CrudTask = (props) => {
         e.preventDefault();
 
         props.addOrEdit(task);
-        setTask({...initialFieldValue})
+        setTask({ ...initialFieldValue })
     }
 
-  
-
-   const getTaskById =  async (id) =>{
+    const getTaskById = async (id) => {
         const doc = await db.collection('tasks').doc(id).get();
-        setTask({...doc.data()})
+        setTask({ ...doc.data() })
     }
 
     useEffect(() => {
-      if(props.currenId === ""){
-        setTask({...initialFieldValue})
-      }else{
-        getTaskById(props.currenId);
-      }
+        if (props.currenId === "") {
+            setTask({ ...initialFieldValue })
+        } else {
+            getTaskById(props.currenId);
+        }
     }, [props.currenId]);
 
 
@@ -64,7 +62,7 @@ const CrudTask = (props) => {
                     <div className="form-group input-group col-md-6">
                         <div className="input-group-prepend">
                             <div className="input-group-text">
-                            <i class="fas fa-audio-description"></i>
+                                <i class="fas fa-audio-description"></i>
                             </div>
                         </div>
                         <input className="form-control" placeholder="description" name="description"
@@ -75,7 +73,7 @@ const CrudTask = (props) => {
                     <div className="form-group input-group col-md-6">
                         <div className="input-group-prepend">
                             <div className="input-group-text">
-                            <i class="fas fa-map-marked"></i>
+                                <i class="fas fa-map-marked"></i>
                             </div>
                         </div>
                         <input className="form-control" placeholder="address" name="address"
@@ -86,7 +84,7 @@ const CrudTask = (props) => {
                     <div className="form-group input-group col-md-6">
                         <div className="input-group-prepend">
                             <div className="input-group-text">
-                            <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
                         </div>
                         <input className="form-control" placeholder="lat" name="lat"
@@ -97,7 +95,7 @@ const CrudTask = (props) => {
                     <div className="form-group input-group col-md-6">
                         <div className="input-group-prepend">
                             <div className="input-group-text">
-                            <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
                         </div>
                         <input className="form-control" placeholder="lng" name="lng"
@@ -107,7 +105,7 @@ const CrudTask = (props) => {
                     </div>
                     <div className="form-group input-group ">
                         <button type="submit" value="save" className="btn btn-primary btn-block"
-                           
+
                         > {props.currenId === '' ? 'save' : 'update'} </button>
                     </div>
                 </div>
@@ -122,7 +120,6 @@ const CrudTask = (props) => {
                 mapElement={<div style={{ height: '100%' }} />}
                 loadingElement={<p>Loading</p>}
             />
-
         </div>
 
     );

@@ -15,6 +15,14 @@ const Auth = () => {
       marginRight: "auto",
     };
 
+    const mystyle2 = {
+      backgroundColor: "#1E90FF",
+    
+    };
+
+    
+  
+
    const submit = async () => {
       await firebase.auth().createUserWithEmailAndPassword(email, password)
    }
@@ -29,8 +37,8 @@ const Auth = () => {
 
    return (
       <div>
-         <div class="jumbotron">
-            <h1 class="display-4">Login /CkeckIn</h1>
+         <div style={mystyle2} class="jumbotron">
+            <h1 class="display-4">Login /Register</h1>
          </div>
 
          {!user &&
@@ -38,9 +46,9 @@ const Auth = () => {
                <div  class="form-group">
 
                </div>
-               <label htmlFor="email">correo</label>
+               <label htmlFor="email">Mail address</label>
                <input  class="form-control" aria-describedby="emailHelp" type="email" id="email" onChange={(ev) => setEmail(ev.target.value)} /> <br />
-               <label htmlFor="password">contraseña</label>
+               <label htmlFor="password">Password</label>
                <input  class="form-control" aria-describedby="emailHelp" type="password" id="password" onChange={(ev) => setPassword(ev.target.value)} /> <br />
                <div>
                <button class="btn btn-primary" onClick={submit}>crear cuenta</button> 
