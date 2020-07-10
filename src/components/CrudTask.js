@@ -64,7 +64,7 @@ const CrudTask = (props) => {
                     <div className="form-group input-group col-md-6">
                         <div className="input-group-prepend">
                             <div className="input-group-text">
-                                <i className="fas fa-mobile-alt"></i>
+                            <i class="fas fa-audio-description"></i>
                             </div>
                         </div>
                         <input className="form-control" placeholder="description" name="description"
@@ -75,7 +75,7 @@ const CrudTask = (props) => {
                     <div className="form-group input-group col-md-6">
                         <div className="input-group-prepend">
                             <div className="input-group-text">
-                                <i className="fas fa-envelope"></i>
+                            <i class="fas fa-map-marked"></i>
                             </div>
                         </div>
                         <input className="form-control" placeholder="address" name="address"
@@ -86,7 +86,7 @@ const CrudTask = (props) => {
                     <div className="form-group input-group col-md-6">
                         <div className="input-group-prepend">
                             <div className="input-group-text">
-                                <i className="fas fa-envelope"></i>
+                            <i class="fas fa-map-marker-alt"></i>
                             </div>
                         </div>
                         <input className="form-control" placeholder="lat" name="lat"
@@ -97,7 +97,7 @@ const CrudTask = (props) => {
                     <div className="form-group input-group col-md-6">
                         <div className="input-group-prepend">
                             <div className="input-group-text">
-                                <i className="fas fa-envelope"></i>
+                            <i class="fas fa-map-marker-alt"></i>
                             </div>
                         </div>
                         <input className="form-control" placeholder="lng" name="lng"

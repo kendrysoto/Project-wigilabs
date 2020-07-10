@@ -12,6 +12,10 @@ const ContactForm = () => {
         email: '',
         address: '',
     }
+    const mystyle = {
+        marginLeft: "auto",
+        marginRight: "auto",
+      };
 
     const [contactInfo, setContactInfo] = useState(initialFieldValue);
 
@@ -38,7 +42,7 @@ const ContactForm = () => {
 
     return (
         <div>
-            <form autoComplete="off"  >
+            <form autoComplete="off"   >
                 <div className="form-group input-group ">
                     <div className="input-group-prepend">
                         <div className="input-group-text">

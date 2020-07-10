@@ -12,8 +12,7 @@ const Main = () => {
   return (
     <div>
       <Switch>
-      <Route exact path="/" component={CheckIn} />
-        <Route path="/gallery" component={CheckIn} />
+      <Route exact path="/" component={Auth} />
         <Route path="/Auth" component={Auth} />
         <Route path="/Contact" component={Contact} />
         <Route path="/Chat" component={Chat} />

@@ -4,6 +4,11 @@ import { db } from './Firebase';
 
 const GalleryImg = (props) => {
     const [images, setImages] = useState([]);
+    const mystyle = {
+        width: "18rem",
+        margin:"15px",
+        
+      };
 
     const getImages = async () => {
         db.collection('gallery').onSnapshot(
@@ -25,8 +30,21 @@ const GalleryImg = (props) => {
     return (
         <>
            {images.map(img => {
-               console.log(img)
-               return <img src={img.imageUrl}/>
+               console.log(images)
+               console.log('ssssssssssss')
+               return (
+                <div key={img.id} class="card" style={mystyle} >
+                <img src={img.imageUrl} class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">{img.titulo}</h5>
+                 
+                  
+                </div>
+              </div>
+
+
+
+               )
            })} 
 
         </>

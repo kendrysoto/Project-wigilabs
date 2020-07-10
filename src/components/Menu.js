@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/SideMenu.css';
 import { Link } from "react-router-dom";
 import { useUser } from 'reactfire';
 
@@ -8,36 +7,29 @@ const Menu = () => {
   const user = useUser();
 
   return (
-    <div>
-      <div class="SideMenu-container">
-        <h1 class="SideMenu-h1">GALERIA</h1>
-      </div >
-      <nav>
-        <div id="menuA">
-          <div href="#" class="showhim"><span class="menumov"> &#8803;</span>
-            <div class="showme">
-              <li><Link to="/" >registrarse</Link></li>
-              <li><Link to="/Auth" >iniciar cesion</Link></li>
-              <li><Link to="/Chat" >Chat</Link></li>
-              <li><Link to="/Contact" >contacto</Link></li>
-              <li><Link to="/Task" >agregar tarea</Link></li>
-              <li><Link to="/GalleryImg" >Gallery</Link></li>
-              <li>{user && <p>usuario:{user.email}</p>}</li>
-            </div>
-          </div>
-        </div>
+    
 
-        <ul class="elivi">
-          <li class="fac"><Link to="/" >registrarse</Link></li>
-          <li class="fac"><Link to="/Auth" >iniciar cesion</Link></li>
-          <li class="fac"><Link to="/Chat" >Chat</Link></li>
-          <li class="fac"><Link to="/Contact" >contacto</Link></li>
-          <li class="fac"><Link to="/Task" >agregar tarea</Link></li>
-          <li class="fac"><Link to="/GalleryImg" >Gallery</Link></li>
-          <li class="fac">{user && <p>usuario:{user.email}</p>}</li>
-        </ul>
-      </nav>
+      <nav class="navbar navbar-expand-lg  navbar-dark bg-primary" >
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <Link className="nav-item nav-link" class="p-3 mb-2 bg-primary text-white" to="/Auth" >Login/CheckIn<span class="sr-only">(current)</span></Link>
+      <Link className="nav-item nav-link" class="p-3 mb-2 bg-primary text-white" to="/Chat" >Chat</Link>
+      <Link className="nav-item nav-link" class="p-3 mb-2 bg-primary text-white" to="/Contact" >Contact</Link>
+     <Link className="nav-item nav-link" class="p-3 mb-2 bg-primary text-white" to="/Task" >agregar tarea</Link>
+      <Link className="nav-item nav-link" class="p-3 mb-2 bg-primary text-white" to="/GalleryImg" >Gallery</Link>
+      <a className="nav-item nav-link" >{user && <p>User :{user.email}</p>}</a>
+      <a className="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
     </div>
+  </div>
+</nav>
+
+
+
+    
   )
 }
 

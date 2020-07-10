@@ -52,7 +52,7 @@ const Task = () => {
         <>
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h1 class="display-4">agregar tareas</h1>
+                    <h1 class="display-4">Add task</h1>
                 </div>
             </div>
             <div className="row">
@@ -60,7 +60,7 @@ const Task = () => {
                     <CrudTask {...{ currenId, tasks, addOrEdit }} />
                 </div>
                 <div className="col-md-7">
-                    <div>lista de tareas</div>
+                    <div><h4>List of task</h4></div>
                     <table class="table">
                         <thead>
                             <tr>
