@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import 'firebase/auth';
 import { db } from './Firebase';
-
+import Map from './Map';
+import credentials from './Credentials';
 
 
 const CrudTask = (props) => {
-
+    const mapUrl = `http://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.mapsKey}`;
 
     const initialFieldValue = {
         inCharge: '',
         description: '',
         address: '',
-        location: '',
+        lat: 6.2518401,
+        lng: -75.563591
     }
 
     const [task, setTask] = useState(initialFieldValue);
@@ -87,8 +89,19 @@ const CrudTask = (props) => {
                                 <i className="fas fa-envelope"></i>
                             </div>
                         </div>
-                        <input className="form-control" placeholder="location" name="location"
-                            value={task.location}
+                        <input className="form-control" placeholder="lat" name="lat"
+                            value={task.lat}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <div className="form-group input-group col-md-6">
+                        <div className="input-group-prepend">
+                            <div className="input-group-text">
+                                <i className="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        <input className="form-control" placeholder="lng" name="lng"
+                            value={task.lng}
                             onChange={handleInputChange}
                         />
                     </div>
@@ -100,6 +113,15 @@ const CrudTask = (props) => {
                 </div>
 
             </form>
+            {console.log(task)}
+            <Map
+                lat={task.lat}
+                lng={task.lng}
+                googleMapURL={mapUrl}
+                containerElement={<div style={{ height: '400px' }} />}
+                mapElement={<div style={{ height: '100%' }} />}
+                loadingElement={<p>Loading</p>}
+            />
 
         </div>
 

@@ -5,19 +5,21 @@ import { db } from './Firebase';
 
 
 
+
+
 const Task = () => {
 
     const [tasks, setTasks] = useState([]);
     const [currenId, setCurrenId] = useState('');
-    
+
 
     const addOrEdit = async (taskObjec) => {
-        if(currenId === ''){
+        if (currenId === '') {
             await db.collection('tasks').doc().set(taskObjec);
-            
-        } else{
+
+        } else {
             await db.collection('tasks').doc(currenId).update(taskObjec);
-            
+
             setCurrenId('');
         }
     };
@@ -33,12 +35,12 @@ const Task = () => {
             });
     }
 
-    const onDeleteTask =async (id)=>{
-        if(window.confirm('estas seguro que quieres eliminarlo')){
-           await db.collection('tasks').doc(id).delete();
-           console.log('eliminado')
+    const onDeleteTask = async (id) => {
+        if (window.confirm('estas seguro que quieres eliminarlo')) {
+            await db.collection('tasks').doc(id).delete();
+            console.log('eliminado')
         }
-        
+
     }
 
     useEffect(() => {
@@ -55,7 +57,7 @@ const Task = () => {
             </div>
             <div className="row">
                 <div className="col-md-5">
-                    <CrudTask {...{currenId, tasks, addOrEdit }} />
+                    <CrudTask {...{ currenId, tasks, addOrEdit }} />
                 </div>
                 <div className="col-md-7">
                     <div>lista de tareas</div>
@@ -63,10 +65,11 @@ const Task = () => {
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">In Charged</th>
+                                <th scope="col">description</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Latitude</th>
+                                <th scope="col">Longitude</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -76,16 +79,17 @@ const Task = () => {
                                     <td>{task.inCharge}</td>
                                     <td>{task.description}</td>
                                     <td>{task.address}</td>
-                                    <td>{task.location}</td>
-                                    <td><button onClick={()=> setCurrenId(task.id)} type="button" class="btn btn-primary">editar</button></td>
-                                    <td><button  onClick={()=> onDeleteTask(task.id)} type="button" class="btn btn-danger">eliminar</button></td>
+                                    <td>{task.lat}</td>
+                                    <td>{task.lng}</td>
+                                    <td><button onClick={() => setCurrenId(task.id)} type="button" class="btn btn-primary">editar</button></td>
+                                    <td><button onClick={() => onDeleteTask(task.id)} type="button" class="btn btn-danger">eliminar</button></td>
                                 </tr>
                             })}
                         </tbody>
                     </table>
                 </div>
             </div>
-
+           
         </>
 
     );

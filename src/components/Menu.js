@@ -21,6 +21,7 @@ const Menu = () => {
               <li><Link to="/Chat" >Chat</Link></li>
               <li><Link to="/Contact" >contacto</Link></li>
               <li><Link to="/Task" >agregar tarea</Link></li>
+              <li><Link to="/GalleryImg" >Gallery</Link></li>
               <li>{user && <p>usuario:{user.email}</p>}</li>
             </div>
           </div>
@@ -32,6 +33,7 @@ const Menu = () => {
           <li class="fac"><Link to="/Chat" >Chat</Link></li>
           <li class="fac"><Link to="/Contact" >contacto</Link></li>
           <li class="fac"><Link to="/Task" >agregar tarea</Link></li>
+          <li class="fac"><Link to="/GalleryImg" >Gallery</Link></li>
           <li class="fac">{user && <p>usuario:{user.email}</p>}</li>
         </ul>
       </nav>

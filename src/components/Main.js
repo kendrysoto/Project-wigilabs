@@ -6,6 +6,7 @@ import { Switch, Route } from "react-router-dom";
  import Contact from './Contact';
  import Chat from './Chat';
  import Task from './Task';
+ import GalleryImg from './GalleryImg';
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
         <Route path="/Contact" component={Contact} />
         <Route path="/Chat" component={Chat} />
         <Route path="/Task" component={Task} />
+        <Route path="/GalleryImg" component={GalleryImg} />
       </Switch>
     </div>
   );
