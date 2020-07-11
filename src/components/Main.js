@@ -10,10 +10,10 @@ const Main = () => {
     <div>
       <Switch>
         <Route exact path="/" component={Auth} />
-        <Route exact path="/gallery" component={Auth} />
+        <Route exact path="/Gallery" component={Auth} />
         <Route path="/Contact" component={Contact} />
         <Route path="/Task" component={Task} />
-        <Route path="/GalleryImg" component={GalleryImg} />
+        <Route exact path="/GalleryImg" component={GalleryImg} />
       </Switch>
     </div>
   );
